@@ -20,7 +20,7 @@ public class AutomationPracticeFormTest {
     }
 
     String firstName = "Rudolf";
-    String lastName = "Bahmet";
+    String lastName = "Bagmet";
     String email = "r@ya.ru";
 
     @Test
