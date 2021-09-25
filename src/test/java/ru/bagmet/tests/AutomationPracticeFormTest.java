@@ -1,4 +1,4 @@
-package ru.bagmet;
+package ru.bagmet.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -45,13 +45,24 @@ public class AutomationPracticeFormTest {
         $("#city").click();
         $("#react-select-4-input").setValue("Noida").pressEnter();
 
-        $("#submit").click();
+        $("#submit").scrollIntoView(true).click();
 
         $(".modal-title").shouldHave(text("Thanks for submitting the form"));
         $x("//table/tbody/tr[1]/td[2]").shouldHave(text(firstName + " " + lastName));
         $x("//table/tbody/tr[2]/td[2]").shouldHave(text(email));
         $$("div.table-responsive td").findBy(text("State and City"))
                 .sibling(0).shouldHave(text("NCR Noida"));
+    }
+
+    @Test
+    void emptyFillFormTest() {
+        open("/automation-practice-form");
+        $("#firstName").shouldBe(empty);
+        $("#submit").scrollIntoView(true).click();
+
+        $("#firstName").scrollIntoView(true)
+                .shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+
     }
 
 }

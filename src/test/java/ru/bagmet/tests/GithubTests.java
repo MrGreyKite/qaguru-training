@@ -1,4 +1,4 @@
-package ru.bagmet;
+package ru.bagmet.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;

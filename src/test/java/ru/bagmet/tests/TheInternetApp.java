@@ -1,4 +1,4 @@
-package ru.bagmet;
+package ru.bagmet.tests;
 
 import org.junit.jupiter.api.Test;
 
