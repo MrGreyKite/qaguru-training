@@ -1,0 +1,1 @@
+enum screenOrientationType {BOOK, ALBOOM}
