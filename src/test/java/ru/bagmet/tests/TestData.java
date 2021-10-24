@@ -7,31 +7,40 @@ import com.github.javafaker.service.RandomService;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import lombok.*;
+
+@Getter
+@Setter
+@Builder(toBuilder = true, builderClassName = "Builder")
+@NoArgsConstructor
+@AllArgsConstructor
 public class TestData {
 
     static Faker faker = new Faker();
     static FakeValuesService fakeValuesService = new FakeValuesService(
             new Locale("en-US"), new RandomService());
 
-    public static String firstName = faker.name().firstName();
-    public static String lastName = faker.name().lastName();
-    public static String email = faker.internet().emailAddress("test");
-    public static Date dateOfBirth = faker.date().birthday();
-    public static String userNumber = fakeValuesService.numerify("##########");
-    public static String currentAddress = faker.address().streetAddress();
+    private String firstName = faker.name().firstName();
+    private String lastName = faker.name().lastName();
+    private String email = faker.internet().emailAddress("test");
+    private Date dateOfBirth = faker.date().birthday();
+    private String userNumber = fakeValuesService.numerify("##########");
+    private String currentAddress = faker.address().streetAddress();
 
     static SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM,yyyy", Locale.ENGLISH);
-    public static String dateOfBirthFormatted = dateFormat.format(dateOfBirth);
+    private String dateOfBirthFormatted = dateFormat.format(dateOfBirth);
 
-    public static String gender = "Male";
-    public static String subject = "English";
-    public static String hobby = "Reading";
-    public static String state = "NCR";
-    public static String city = "Noida";
+    private String gender = "Male";
+    private String subject1 = "English";
+    private String subject2;
+    private String hobby1 = "Reading";
+    private String hobby2;
+    private String state = "NCR";
+    private String city = "Noida";
 
-    public static String pictureName = "1.jpg";
+    private String pictureName = "1.jpg";
 
-    public static String registrationModalTitle = "Thanks for submitting the form";
-
-
+    void setDateOfBirthFormatted(Date dateOfBirth) {
+        this.dateOfBirthFormatted = dateFormat.format(dateOfBirth);
+    }
 }

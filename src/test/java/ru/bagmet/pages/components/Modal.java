@@ -6,6 +6,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Modal {
 
+    private final String registrationModalTitle = "Thanks for submitting the form";
+
     public void checkModalHeaderTitle(String title) {
         $(".modal-title").shouldHave(text(title));
     }

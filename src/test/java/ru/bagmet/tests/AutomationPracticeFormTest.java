@@ -6,7 +6,7 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-import static ru.bagmet.tests.TestData.*;
+import static ru.bagmet.tests.TestDataOriginal.*;
 
 public class AutomationPracticeFormTest extends TestBase {
 

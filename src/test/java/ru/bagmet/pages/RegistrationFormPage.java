@@ -5,7 +5,7 @@ import ru.bagmet.pages.components.Calendar;
 import ru.bagmet.pages.components.Modal;
 
 import static com.codeborne.selenide.Condition.*;
-import static ru.bagmet.tests.TestData.*;
+import static ru.bagmet.tests.TestDataOriginal.*;
 
 
 import java.io.File;

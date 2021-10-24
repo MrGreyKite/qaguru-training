@@ -5,8 +5,7 @@ import ru.bagmet.pages.RegistrationFormPage;
 import ru.bagmet.pages.components.Modal;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
-import static ru.bagmet.tests.TestData.*;
+import static ru.bagmet.tests.TestDataOriginal.*;
 
 public class AutomationPracticeFormPageObjectsAndFakers extends TestBase {
 
